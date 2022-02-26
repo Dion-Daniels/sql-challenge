@@ -1,0 +1,34 @@
+Department as dp
+-
+dept_no pk charvar(45)
+dept_name charvar(45)
+
+dept_emp
+-
+emp_no integer fk >- emp.emp_no
+dept_no charvar(45) fk  >- dp.dept_no
+
+dept_manager
+-
+dept_no charvar(45) fk  >- dp.dept_no
+emp_no integer fk >- emp.emp_no
+
+Employees as emp
+-
+emp_no integer pk
+emp_title charvar(45) fk - ti.title_id
+birth_date date
+first_name charvar(45)
+last_name charvar(45)
+sex charvar(45)
+hire_date date
+
+Salaries
+- 
+emp_no integer fk - emp.emp_no
+salary integer
+
+Titles as ti
+-
+title_id varchar(45) pk
+title varchar(45)
